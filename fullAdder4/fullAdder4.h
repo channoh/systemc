@@ -2,10 +2,11 @@
 #include "fullAdder.h"
 
 SC_MODULE(fullAdder4) {
-    sc_in< sc_lv<4> > X, Y;
+    sc_in< sc_lv<4> > X;
+    sc_in< sc_lv<4> > Y;
     sc_in< sc_lv<1> > Ci;
-    sc_out< sc_lv<1> > Co;
     sc_out< sc_lv<4> > S;
+    sc_out< sc_lv<1> > Co;
 
     fullAdder fa0, fa1, fa2, fa3;
 
@@ -27,23 +28,23 @@ SC_MODULE(fullAdder4) {
         Y0 = (sc_lv<1>)Y.read()[0];
         fa0(X0, Y0, Ci, S0, C1);
 
-        X1 = (sc_lv<1>)X.read()[1];
-        Y1 = (sc_lv<1>)Y.read()[1];
-        fa1(X1, Y1, C1, S1, C2);
+        // X1 = (sc_lv<1>)X.read()[1];
+        // Y1 = (sc_lv<1>)Y.read()[1];
+        // fa1(X1, Y1, C1, S1, C2);
 
-        X2 = (sc_lv<1>)X.read()[1];
-        Y2 = (sc_lv<1>)Y.read()[1];
-        fa2(X2, Y2, C2, S2, C3);
+        // X2 = (sc_lv<1>)X.read()[1];
+        // Y2 = (sc_lv<1>)Y.read()[1];
+        // fa2(X2, Y2, C2, S2, C3);
 
-        X3 = (sc_lv<1>)X.read()[1];
-        Y3 = (sc_lv<1>)Y.read()[1];
-        fa3(X3, Y3, C3, S3, Co);
+        // X3 = (sc_lv<1>)X.read()[1];
+        // Y3 = (sc_lv<1>)Y.read()[1];
+        // fa3(X3, Y3, C3, S3, Co);
 
-        Stmp[3] = S3;
-        Stmp[2] = S2;
-        Stmp[1] = S1;
-        Stmp[0] = S0;
+        // Stmp[3] = S3;
+        // Stmp[2] = S2;
+        // Stmp[1] = S1;
+        // Stmp[0] = S0;
 
-        S = Stmp;
+        // S = Stmp;
     }
 };
