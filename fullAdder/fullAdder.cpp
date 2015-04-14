@@ -13,4 +13,6 @@ void fullAdder::doit(void){
 
     S.write((sc_lv<1>)tmp_S);
     C.write((sc_lv<1>)tmp_C);
+
+
 }

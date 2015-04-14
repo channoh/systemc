@@ -6,6 +6,7 @@ SC_MODULE(test) {
     sc_in<sc_lv<1>> S_out,C_out;
 
     void do_test();
+    void print();
 
     SC_CTOR(test) {
         SC_CTHREAD(do_test,clock.neg());
