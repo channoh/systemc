@@ -3,8 +3,8 @@
 #include "test.h"
 
 int sc_main(int argc, char* argv[]) {
-    sc_signal<sc_lv<1> > X_in,Y_in,Ci_in;
-    sc_signal<sc_lv<1> > S_out,C_out;
+    sc_signal<sc_lv<1>> X_in,Y_in,Ci_in;
+    sc_signal<sc_lv<1>> S_out,C_out;
 
     sc_clock CLK("clock",10,SC_NS);
 
