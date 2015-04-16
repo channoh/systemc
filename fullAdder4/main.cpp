@@ -18,7 +18,6 @@ int sc_main(int argc, char* argv[]) {
 
     vector2bits v2b1("v2b1");
     v2b1(X, X4, X3, X2, X1);
-    // v2b1(X, S4, S3, S2, S1);
 
     vector2bits v2b2("v2b2");
     v2b2(Y, Y4, Y3, Y2, Y1);
