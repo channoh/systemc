@@ -2,32 +2,38 @@
 void test::do_test() {
     std::cout   << "time\tX\tY\tCi\tS\tCo" << std::endl;
     while(true) {
-        X_in.write(0);
-        Y_in.write(0);
+        X_in = "0000";
+        Y_in = "0001";
         Ci.write(0);
         print();
         wait(1);
 
-        X_in.write(1);
-        Y_in.write(0);
+        X_in = "0001";
+        Y_in = "0001";
+        Ci.write(1);
+        print();
+        wait(1);
+
+        X_in = "0010";
+        Y_in = "0010";
         Ci.write(0);
         print();
         wait(1);
 
-        X_in.write(1);
-        Y_in.write(0);
+        X_in = "0100";
+        Y_in = "0100";
         Ci.write(1);
         print();
         wait(1);
 
-        X_in.write(0);
-        Y_in.write(0);
-        Ci.write(1);
+        X_in = "1000";
+        Y_in = "0000";
+        Ci.write(0);
         print();
         wait(1);
 
-        X_in.write(1);
-        Y_in.write(1);
+        X_in = "1000";
+        Y_in = "0001";
         Ci.write(1);
         print();
         wait(1);
